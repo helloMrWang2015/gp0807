@@ -57,3 +57,13 @@ readme
 3. git pull：从远程获取最新版本并merge到本地
 4. git pull origin 分支名
 5. 克隆会克隆所有的数据，包括它的本地仓库，日志等文件
+
+## git branch
+1. 查看分支
+2. 当前分支前面有*
+
+## git branch 分支名
+1. 创建分支
+
+## git checkout
+1. 切换分支
