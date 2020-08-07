@@ -30,3 +30,6 @@ readme
 
 ## git diff 文件名
 1. 查看文件变更信息
+
+## git reset --hard HEAD^^ 回退两个版本
+## git reset --hard 191e0c7 回退到指定版本
