@@ -57,3 +57,5 @@ readme
 3. git pull：从远程获取最新版本并merge到本地
 4. git pull origin 分支名
 5. 克隆会克隆所有的数据，包括它的本地仓库，日志等文件
+
+## 这是test2分支的修改
