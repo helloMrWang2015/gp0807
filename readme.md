@@ -73,3 +73,6 @@ readme
 
 ## git branch -d 分支名
 1. 删除分支
+
+## git config --global credential.helper store
+1. 无需每次提交输入密码
