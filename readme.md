@@ -40,3 +40,18 @@ readme
 ## git remote add origin 仓库地址
 1. 把本地仓库与远程仓库关联
 2. origin仓库名可以自定义
+
+## git remote -v
+1. 查看本地仓库关联的远程仓库地址
+
+## git push -u origin master
+1. `git push` 本地仓库提交到远程仓库
+2. `-u origin master` 设置默认的远程仓库和分支
+3. 执行完这个命令之后，以后可以直接`git push`提交到远程仓库的master分支
+4. upstream : 关联，设置成默认关联
+
+
+## 更新代码
+1. 把远程代码更新到本地时，一定要先提交本地代码再更新
+2. git fetch：相当于是从远程仓库更新到本地，不会自动merge（合并到工作区）
+2. git pull：从远程获取最新版本并merge到本地
