@@ -33,3 +33,10 @@ readme
 
 ## git reset --hard HEAD^^ 回退两个版本
 ## git reset --hard 191e0c7 回退到指定版本
+
+
+## 远程仓库
+
+## git remote add origin 仓库地址
+1. 把本地仓库与远程仓库关联
+2. origin仓库名可以自定义
