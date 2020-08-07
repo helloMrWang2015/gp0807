@@ -76,3 +76,5 @@ readme
 
 ## git config --global credential.helper store
 1. 无需每次提交输入密码
+
+## ssh地址提交
