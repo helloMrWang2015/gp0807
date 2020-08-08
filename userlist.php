@@ -18,8 +18,7 @@ if(!$link){
     echo '{"err":-1,"msg":"连接失败"}';
     die();
 }
-$page=1;
-$type='update';
+
 // 判断请求目的
 if($type==='page'){
     
@@ -45,17 +44,41 @@ if($type==='page'){
     }
     
 
-}else if($type === 'updata'){
-    // 设置更新数据
-    $update_sql = "update user set name='$name',age='$age',sex='$sex',phone='$phone' where id='$userId'";
-    $update_res = mysqli_query($link,$update_sql);
+}else if($type === 'update'){
 
-    if(mysqli_affected_rows($link) > 0){
+    // 设置更新数据
+    // $update_sql = "update user set name='$name',sex='$sex',age='$age',phone='$phone' where id='$userId'";
+    $update_sql = "update users set 姓名='$name',性别='$sex',年龄='$age',电话='$phone' where id='$userId'";
+
+    // echo '{"err":'.$name.',"msg":'.$age.',"sex":'.$sex.',"userId":'.$userId.'}';
+    $update_res = mysqli_query($link,$update_sql);
+    $num2 = mysqli_affected_rows($link);
+    if( $num2 > 0){
         echo '{"err":1,"msg":"修改成功"}';
     }else{
         echo '{"err":0,"msg":"修改失败"}';
     }
-}else{
+}else if($type === 'delete'){
+    $delete_sql = "delete from users where id='$userId'";
+    $delete_res = mysqli_query($link,$delete_sql);
+    $num3 = mysqli_affected_rows($link);
+    if( $num3 > 0){
+        echo '{"err":1,"msg":"删除成功"}';
+    }else{
+        echo '{"err":0,"msg":"删除失败"}';
+    }
+}else if($type === 'add'){
+    // echo '{"err":'.$name.',"msg":'.$age.',"sex":'.$sex.'}';
+    $add_sql = "insert into users (姓名,性别,年龄,电话) values ('$name','$sex','$age','$phone')";
+    $add_res = mysqli_query($link,$add_sql);
+    if( mysqli_affected_rows($link) > 0){
+        echo '{"err":1,"msg":"添加成功"}';
+    }else{
+        echo '{"err":0,"msg":"添加失败"}';
+    }
+}
+
+else{
     echo '{"err":0,"msg":"参数错误"}';
 }
 
